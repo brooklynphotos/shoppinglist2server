@@ -10,4 +10,5 @@ import javax.persistence.*;
 public class Shop {
     @Getter @Setter @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private int id;
     @Getter @Setter @Column(name="name") private String name;
+    @Getter @Setter @Column(name="description") private String description;
 }
