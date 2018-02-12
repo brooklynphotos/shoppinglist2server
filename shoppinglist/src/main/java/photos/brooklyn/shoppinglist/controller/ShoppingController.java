@@ -1,6 +1,7 @@
 package photos.brooklyn.shoppinglist.controller;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import photos.brooklyn.shoppinglist.domain.Item;
 import photos.brooklyn.shoppinglist.domain.Location;
+import photos.brooklyn.shoppinglist.domain.Priority;
 import photos.brooklyn.shoppinglist.domain.ShoppingItem;
 
 @RestController
@@ -30,6 +32,11 @@ public class ShoppingController {
 		final List<ShoppingItem> items = new ArrayList<>();
 		ShoppingItem e1 = new ShoppingItem();
 		e1.setId(1);
+		e1.setLastDateBought(new Date());
+		e1.setName("Watermelon Juice");
+		e1.setPriority(Priority.HIGH);
+		e1.setNote("Only organic");
+		e1.setQuantity(20);
 		final Location loc = new Location();
 		loc.setSection("baking");
 		e1.setLocation(loc);
